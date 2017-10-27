@@ -197,9 +197,9 @@ public class CameraView extends FrameLayout {
         int width = getMeasuredWidth();
         int height = getMeasuredHeight();
         AspectRatio ratio = getAspectRatio();
-        if (mDisplayOrientationDetector.getLastKnownDisplayOrientation() % 180 == 0) {
+        /*if (mDisplayOrientationDetector.getLastKnownDisplayOrientation() % 180 == 0) {
             ratio = ratio.inverse();
-        }
+        }*/
         assert ratio != null;
         if (height < width * ratio.getY() / ratio.getX()) {
             mImpl.getView().measure(
